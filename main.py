@@ -11,7 +11,7 @@ app = FastAPI()
 def create_file(file: UploadFile = File(...)):
     if not file:
         raise HTTPException(detail="file not provided",status_code=400)
-    top_terorists = valid(f'{file.filename}').top_terorist().to_dict(orient="dict")
+    top_terorists = valid(f'{file.filename}').top_5_terorists().to_dict(orient="dict")
     
     return { 
         "count":len(top_terorists),

@@ -6,10 +6,10 @@ class Validation():
     def __init__(self, file) -> None:
         self.file = pd.read_csv(file)
 
-    def top_terorist(self):
+    def top_5_terorists(self):
         self.file.sort_values(by="danger_rate", ascending=False)
-        top_terorist = self.file.head()
-        return top_terorist   
+        top_5_terorists = self.file.head()
+        return top_5_terorists  
 
     def drop_column_age(self):
         self.file.drop('age',axis=1)

@@ -11,7 +11,7 @@ spec:
     - protocol: TCP
       port: 8000
       targetPort: 8000
-      nodePort: 30080
+      nodePort: 32080 #30080 not working
   selector:
     app: threat-api
     tier: backend
