@@ -1,6 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException, UploadFile
-import pandas as pd
-import numpy as np
+from fastapi import FastAPI, UploadFile
 import uvicorn
 
 app = FastAPI()
